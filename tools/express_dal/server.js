@@ -5,11 +5,11 @@ var passport = require('passport');
 var cookieParser = require('cookie-parser');
 var LocalStrategy = require('passport-local').Strategy;
 
-var reimbursement = require('./reimbursement');
+// var reimbursement = require('./reimbursement');
 var maintenance = require('./maintenance');
-var reimbursement = require('./reimbursement');
-var loginRegister = require('./loginRegister.js');
-var apartments = require('./apartments');
+// var reimbursement = require('./reimbursement');
+// var loginRegister = require('./loginRegister.js');
+// var apartments = require('./apartments');
 
 var app = express();
 
@@ -42,25 +42,25 @@ app.get('/maintenanceTicket/:ticket_id', maintenance.getTicketById);
 app.post('/maintenanceCheck', maintenance.submitNewTicket);
 app.post('/maintenanceUpdate', maintenance.updateTicket);
 
-app.get('/apartments/allusers',apartments.allusers);
-app.get('/apartments', apartments.findAllApartments);
-app.get('/apartments/:aptId', apartments.findApartmentsByAptId);
-app.post('/apartments/allusers/:userName/:aptId',apartments.updateAptID);
-app.post('/apartments', apartments.addApartment);
-app.post('/apartments/:aptId/:userName',apartments.updateApartment);
+// app.get('/apartments/allusers',apartments.allusers);
+// app.get('/apartments', apartments.findAllApartments);
+// app.get('/apartments/:aptId', apartments.findApartmentsByAptId);
+// app.post('/apartments/allusers/:userName/:aptId',apartments.updateAptID);
+// app.post('/apartments', apartments.addApartment);
+// app.post('/apartments/:aptId/:userName',apartments.updateApartment);
 
-app.get('/reimbursements', reimbursement.findAllReimbursements);
-app.get('/reimbursements/:id', reimbursement.findReimbursementById);
-app.get('/reimbursement/:username', reimbursement.findReimbursementsByUsername);
-app.post('/reimbursements', reimbursement.addReimbursement);
-app.post('/reimbursements/:id/:decision',reimbursement.updateReimbursement);
+// app.get('/reimbursements', reimbursement.findAllReimbursements);
+// app.get('/reimbursements/:id', reimbursement.findReimbursementById);
+// app.get('/reimbursement/:username', reimbursement.findReimbursementsByUsername);
+// app.post('/reimbursements', reimbursement.addReimbursement);
+// app.post('/reimbursements/:id/:decision',reimbursement.updateReimbursement);
 
-app.post('/login', loginRegister.loginUser);
-app.post('/createUser' , loginRegister.createUser); //create a new user
-app.get('/logout', function(req, res){ //passports logout function
-  req.logout();
-  res.redirect('/');
-});
+// app.post('/login', loginRegister.loginUser);
+// app.post('/createUser' , loginRegister.createUser); //create a new user
+// app.get('/logout', function(req, res){ //passports logout function
+//   req.logout();
+//   res.redirect('/');
+// });
 
 app.listen(3030);
 console.log('Listening on port 3030...');
