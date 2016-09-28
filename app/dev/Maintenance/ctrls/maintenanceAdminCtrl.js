@@ -6,10 +6,9 @@ maintenance.controller("maintenanceAdminCtrl", function($scope,dataAdminFactory,
 	$scope.categories = dataAdminFactory.getCategories();
 	$scope.changedTicket = {};
 
-	var getAllTickets = function()
+	var getAllTickets = function()//set up function to return all maintence request tickets
 	{
 		var result = [];
-
 		dataAdminFactory.getAllTickets()
 		.then(
 			function(data)
@@ -17,7 +16,6 @@ maintenance.controller("maintenanceAdminCtrl", function($scope,dataAdminFactory,
 				result = data.data;
 				$scope.ticketHistory = result;
 				// console.log($scope.ticketHistory);
-
 			},
 			function(err)
 			{
@@ -25,14 +23,13 @@ maintenance.controller("maintenanceAdminCtrl", function($scope,dataAdminFactory,
 			}
 			);
 		return result;
-
 	};
 
 	getAllTickets();
 	// console.log($scope.ticketHistory);
-		$scope.submitNewTicket  = function(){
-	 	// console.log($scope.ticket);
 
+		$scope.submitNewTicket  = function(){// function to submit new ticket
+	 	// console.log($scope.ticket);
 	 	$scope.ticketSubmission.push({
 			category:$scope.ticket.category,
 			description:$scope.ticket.description,
@@ -59,7 +56,7 @@ maintenance.controller("maintenanceAdminCtrl", function($scope,dataAdminFactory,
 	 			);
 	 };
 
-	 $scope.getTicketById = function(id, callback){
+	 $scope.getTicketById = function(id, callback){// get ticket by it's (_id)
 	 	dataAdminFactory.getTicketById(id)
 	 	.then(
 	 		function(result)
@@ -73,7 +70,7 @@ maintenance.controller("maintenanceAdminCtrl", function($scope,dataAdminFactory,
 	 		);
 	 };
 
-	$scope.updateTicket = function(id){// updates a ticket
+	$scope.updateTicket = function(id){// updates a ticket// check why it is not geting success function
 
 		$scope.getTicketById(id, function(result) {//gets a particular ticket by it's (_id)
 
@@ -85,7 +82,7 @@ maintenance.controller("maintenanceAdminCtrl", function($scope,dataAdminFactory,
 					dataAdminFactory.updateTicket($scope.changedTicket)
 					   .then(
 					 	function(data){
-					 		getAllTickets();
+					 		getAllTickets();//c
 					 	},
 					 	function(){
 					 		//alert('Failed Update');

@@ -5,7 +5,7 @@ maintenance.controller('maintenanceCtrl', function($scope,dataAdminFactory,seshk
 	$scope.ticketHistory = [];
 	$scope.ticketSubmission = [];
 	
-	var getTicketsByUser = function(username)
+	var getTicketsByUser = function(username)// get all tickets from a particular user
 	{
 		var result = [];
 		//console.log(dataAdminFactory);
@@ -32,7 +32,7 @@ maintenance.controller('maintenanceCtrl', function($scope,dataAdminFactory,seshk
 	
 	getTicketsByUser(seshkeys.username);//pass session key of user
 
-	$scope.submitNewTicket  = function(){
+	$scope.submitNewTicket  = function(){// submit new ticket
 	 	// console.log($scope.ticket);
 
 	 	$scope.ticketSubmission.push({
