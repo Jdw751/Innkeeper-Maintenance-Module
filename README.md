@@ -54,8 +54,8 @@ The webhost will run on localhost:3000
 
 - Jon-Erik Williams
 
-### License
-[MIT](https://github.com/revature-js/Innkeeper/blob/master/LICENSE)
-[Creative Commons CC-BY](https://creativecommons.org/licenses/by/4.0/legalcode)
+### Licenses
+-[MIT](https://github.com/revature-js/Innkeeper/blob/master/LICENSE)
+-[Creative Commons CC-BY](https://creativecommons.org/licenses/by/4.0/legalcode)
 
 
