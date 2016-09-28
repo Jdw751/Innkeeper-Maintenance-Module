@@ -1,0 +1,41 @@
+
+<div ng-app="ApartmentApp">
+   <div class="container">
+      <div class="panel panel-primary" ng-hide="userhide">
+         <div class="panel-heading" ng-hide="userhide">
+            <h3>Apartment Address</h3>
+         </div>
+         <div class="panel-body" ng-hide="userhide">
+            <div class="col-md-offset-1">Street: {{data.addr.num}} {{data.addr.street}}</div>
+            </p>
+            <p>
+            <div class="col-md-offset-1">City: {{data.addr.city}}</div>
+            </p>
+            <p>
+            <div class="col-md-offset-1">State: {{data.addr.state}}</div>
+            </p>
+            <p>
+            <div class="col-md-offset-1">Zip Code: {{data.addr.zip}}</div>
+            </p>
+            <div class="col-md-offset-1">Suite No: {{data.addr.suite}}</p></div>
+         </div>
+      </div>
+      <div class="panel panel-primary" ng-hide="userhide">
+         <div class="panel-heading">
+            <h3>Room Information</h3>
+         </div>
+         <div class="panel-body" ng-hide="userhide">
+            <p>chairs:{{data.rooms[0].bedrooms[0].room.chair}}</p>
+            <p>beds:{{data.rooms[0].bedrooms[0].room.bed}}</p>
+         </div>
+      </div>
+   </div>
+</div>
+  <div class="panel panel-primary" ng-show="userhide">
+<div class="panel-heading" ng-show="userhide">
+            <h3>Apartment Address</h3>
+         </div>
+  <div class="panel-body" ng-show="userhide">
+            <p>Not yet assigned an apartment</p>
+         </div>
+         </div>
