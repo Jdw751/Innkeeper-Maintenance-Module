@@ -1,12 +1,12 @@
 # Maintenance Module 
-This Angular application is an online system for managing accommodation and reimbursement logistics that incorporates various service features.  It allows admins and associates to interact within a facilities portal.  The environment is complete with Angular, Webpack, Mongo Driver, Express, and Node.
+This Angular module that is part of an online system for managing accommodation and reimbursement logistics that incorporates various service features. It allows administrators and associates to interact within a facilities portal. Administrator can submit maintenance request tickets was well as update the status of any particular one. Associates are also allowed to ticket submission in addition to being able to see the progress and any tickets one has submitted. The environment is complete with Angular, Webpack, Mongo Driver, Express, and Node.
 
 ## This is part of the Innkeeper Application located:
 [Innkeeper On Git](https://github.com/revature-js/innkeeper)
 
 
 ###### menu
-- [Description](#innkeeper)
+- [Description](#Maintenance Module)
 - [Responsibilities](#responsibilities)
 - [Features & Services](#features-and-services)
 - [Technologies](#technologies)
@@ -24,7 +24,7 @@ This Angular application is an online system for managing accommodation and reim
 
 ### Features and Services
 
-- Maintenance Request Module ([Jon-Erik](#developers))
+- Maintenance Request Module ([Jon-Erik Williams](#developers))
 
 ### Technologies
 - Angular JS
@@ -52,7 +52,7 @@ The webhost will run on localhost:3000
 
 ### Developer
 
-- Jon-Erik
+- Jon-Erik Williams
 
 ### License
 [MIT](https://github.com/revature-js/Innkeeper/blob/master/LICENSE)
